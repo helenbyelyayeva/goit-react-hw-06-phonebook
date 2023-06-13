@@ -1,9 +1,9 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { setFilter } from 'redux/filterSlice';
-import css from "./Filter.module.css";
+import css from './Filter.module.css';
 
-export function Filter() {
+export const Filter = () => {
     const dispatch = useDispatch();
 
     const changeFilter = (e) => {
@@ -12,14 +12,15 @@ export function Filter() {
 
     return (
         <div className={css.search}>
-            <label className={css.formLabel}>
-                Find contact by name
-            </label>
+            <label className={css.formLabel}>Find contact by name</label>
             <input
-                name='filter'
+                name="filter"
                 className={css.formInput}
                 placeholder="Search for..."
-                onChange={changeFilter} />
+                onChange={changeFilter}
+            />
         </div>
     );
-}
+};
+
+

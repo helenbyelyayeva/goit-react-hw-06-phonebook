@@ -6,9 +6,9 @@ import css from "./Filter.module.css";
 export function Filter() {
     const dispatch = useDispatch();
 
-    const changeFilter = e => {
+    const changeFilter = (e) => {
         dispatch(setFilter(e.target.value));
-      };
+    };
 
     return (
         <div className={css.search}>

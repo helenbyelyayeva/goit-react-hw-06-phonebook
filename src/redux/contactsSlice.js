@@ -13,7 +13,8 @@ export const contactsSlice = createSlice({
         addContact(state, action) {
             state.unshift({
                 id: nanoid(),
-                ...action.payload,
+                name: action.payload.name,
+                number: action.payload.number,
             });
         },
         deleteContact(state, action) {

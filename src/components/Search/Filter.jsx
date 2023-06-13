@@ -6,8 +6,8 @@ import css from "./Filter.module.css";
 export function Filter() {
     const dispatch = useDispatch();
 
-    const changeFilter = event => {
-        dispatch(setFilter(event.target.value));
+    const changeFilter = e => {
+        dispatch(setFilter(e.target.value));
       };
 
     return (

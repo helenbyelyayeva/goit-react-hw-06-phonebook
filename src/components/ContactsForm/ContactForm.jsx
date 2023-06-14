@@ -45,7 +45,7 @@ export function ContactForm() {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Please enter name"
-                pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+                pattern="^([a-zA-Z]{2,}\s[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\s?([a-zA-Z]{1,})?)"
                 title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
                 required
             />
@@ -57,7 +57,7 @@ export function ContactForm() {
                 value={formData.number}
                 onChange={handleChange}
                 placeholder="Please enter number"
-                pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+                pattern="[0-9\-\(\) ]*"
                 title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
                 required
             />

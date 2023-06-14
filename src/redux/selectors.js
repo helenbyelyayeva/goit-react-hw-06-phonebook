@@ -8,7 +8,7 @@ export const getVisibleContacts = createSelector(
   (contacts, filter) => {
     const normalizedFilter = filter.toLowerCase();
     const filteredContacts = contacts.filter(({ name }) =>
-      name.toLowerCase().startsWith(normalizedFilter),
+      name.toLowerCase().includes(normalizedFilter),
     );
     return filteredContacts.sort((a, b) => a.name.localeCompare(b.name));
   },
